@@ -1,0 +1,22 @@
+syntax = 'proto3';
+
+package movieApi;
+
+import 'proto/film.proto';
+
+option go_package = 'sajoniks.github.io/movieApi/pkg/proto-gen';
+
+message GetFilmsFilm {
+  int32 id = 1;
+  movieApi.Film film = 2;
+}
+
+message GetFilmsRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+}
+
+message GetFilmsResponse {
+  repeated GetFilmsFilm films = 1;
+  string next_page_token = 2;
+}

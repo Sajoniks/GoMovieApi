@@ -1,0 +1,11 @@
+syntax = 'proto3';
+
+package movieApi;
+
+import 'proto/get_films.proto';
+
+option go_package = 'sajoniks.github.io/movieApi/pkg/proto-gen';
+
+service MovieApi {
+  rpc GetAllMovies(movieApi.GetFilmsRequest) returns (stream movieApi.GetFilmsResponse);
+}

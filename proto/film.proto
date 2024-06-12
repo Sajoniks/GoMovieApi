@@ -1,0 +1,13 @@
+syntax = 'proto3';
+
+package movieApi;
+
+option go_package = 'sajoniks.github.io/movieApi/pkg/proto-gen';
+
+message Film {
+  string name = 1;
+  string year = 2;
+  int32 studio_id = 3;
+  int32 rating_id = 4;
+  int32 gross = 5;
+}

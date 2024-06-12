@@ -1,0 +1,11 @@
+syntax = 'proto3';
+
+package movieApi;
+
+import 'proto/film.proto';
+
+option go_package = 'sajoniks.github.io/movieApi/pkg/proto-gen';
+
+message CreateFilmRequest {
+  movieApi.Film film = 1;
+}

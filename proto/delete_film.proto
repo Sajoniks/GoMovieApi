@@ -1,0 +1,9 @@
+syntax = 'proto3';
+
+package movieApi;
+
+option go_package = 'sajoniks.github.io/movieApi/pkg/proto-gen';
+
+message DeleteFilmRequest {
+  int32 id = 1;
+}
