@@ -45,9 +45,10 @@ To stop the DB and clean up, run the following
 ```
 
 #### Protobuf
+Before running, you must install `gen-go-grpc` and `gen-go` plugins.
 Navigate to project root and run the following to compile `.proto` files
 ```shell
-> protoc -I . --go_out=. --go_opt=module=sajoniks.github.io/movieApi --go_grpc_out=. --go_grpc_opt=module=sajoniks.github.io/movieApi .\proto\*.proto
+> protoc -I . --go_out=. --go_opt=module=sajoniks.github.io/movieApi --go-grpc_out=. --go-grpc_opt=module=sajoniks.github.io/movieApi ./proto/*.proto
 ```
 This will generate `protobuf` files in the `pkg/proto-gen` directory.
 
