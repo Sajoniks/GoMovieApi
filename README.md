@@ -64,13 +64,13 @@ This will run `gRPC` server on port `55005`.
 
 ### Docker
 
+---
+
 Navigate to project root and run the compose file
 
 ```shell
 > docker compose build && docker compose up
 ```
-
----
 
 # Project Structure
 
