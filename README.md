@@ -1,15 +1,11 @@
 # Movies API
 
----
-
 `Movies API` is a project I am working on for education purposes. I try to follow `Domain Driven Design`, `Clean Architecture`
 and modern backend technologies.
 
 It is written in `Go`, and uses `PostgreSQL` for persistance and `gRPC` for communication.
 
 # Installation
-
----
 
 Installation includes several steps: run and build the application, and run the database. 
 Application can be build manually or  run in the container. The database has to be containerized for schema initialization.
