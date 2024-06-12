@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image:
+      postgres:14.12
+    environment:
+      POSTGRES_DB: "movie_api"
+      POSTGRES_USER: "movie_api"
+      POSTGRES_PASSWORD: "123"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./script/postgres:/docker-entrypoint-initdb.d
+
+  movie-api:
+    build:
+      context: .
+    image: "movie-api"
+    container_name: "movie-api"
+    ports:
+      - "55005:55005"
+    depends_on:
+      - postgres
